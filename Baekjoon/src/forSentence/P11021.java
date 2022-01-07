@@ -1,4 +1,4 @@
-package forSentence.p11021;
+package forSentence;
 
 import java.util.Scanner;
 import java.util.Vector;
@@ -6,7 +6,7 @@ import java.util.Vector;
 /**
  * Baekjoon 단계별로 풀어보기 - for문 11021번. A+B - 7
  */
-public class AplusB7 {
+public class P11021 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int T = scanner.nextInt();

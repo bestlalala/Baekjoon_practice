@@ -1,11 +1,11 @@
-package forSentence.p11022;
+package forSentence;
 
 import java.util.Scanner;
 
 /**
  * Baekjoon 단계별로 풀어보기 - for문 11022번. A+B - 8
  */
-public class AplusB8 {
+public class P11022 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int T = scanner.nextInt();

@@ -1,11 +1,11 @@
-package forSentence.p2741;
+package forSentence;
 
 import java.util.Scanner;
 
 /**
  * Baekjoon 단계별로 풀어보기 - for문 2741번. N 찍기
  */
-public class PrintN {
+public class P2741 {
 
     public static void main(String[] args) {
         int N;

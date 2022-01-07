@@ -1,11 +1,11 @@
-package forSentence.p2742;
+package forSentence;
 
 import java.util.Scanner;
 
 /**
  * Baekjoon 단계별로 풀어보기 - for문 2742번. 기찍 N
  */
-public class TnirpN {
+public class P2742 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
