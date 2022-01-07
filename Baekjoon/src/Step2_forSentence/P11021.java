@@ -1,4 +1,4 @@
-package forSentence;
+package Step2_forSentence;
 
 import java.util.Scanner;
 import java.util.Vector;
