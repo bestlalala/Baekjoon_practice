@@ -1,4 +1,4 @@
-package Step2_forSentence;
+package Step3_forSentence;
 
 import java.util.Scanner;
 
