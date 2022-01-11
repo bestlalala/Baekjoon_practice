@@ -3,8 +3,12 @@ package Step6_function;
 public class P4673 {
 
     public static int d(int n) {
-        n = n + n/10 + n%10;
-        return n;
+        int result = n;
+        while ( n > 0 ) {
+            result += n % 10;
+            n /= 10;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
