@@ -1,10 +1,8 @@
 package Algorithm.DFS;
 
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
+//DFS 와 BFS
 public class P1260 {
 
     public static void main(String[] args) {
@@ -29,9 +27,13 @@ public class P1260 {
         }
 
         for (int i = 1; i <= n; i++) {
-            Collections.sort(adjList[i]);
+            Collections.sort(adjList[i]); // 방문 순서를 위해 오름차순 정렬
         }
         dfs_list(v, adjList, visited);
+        System.out.println("");
+        // 방문 검사 배열 초기화
+        Arrays.fill(visited, false);
+        bfs_list(v, adjList, visited);
     }
 
     public static void dfs_list(int v, LinkedList<Integer>[] adjList, boolean[] visited) {
@@ -43,6 +45,26 @@ public class P1260 {
             int w = iter.next();
             if (!visited[w]) { // 방문하지 않은 정점이라면
                 dfs_list(w, adjList, visited); // 다시 DFS
+            }
+        }
+    }
+
+    public static void bfs_list(int v, LinkedList<Integer>[] adjList, boolean[] visited) {
+        Queue<Integer> queue = new LinkedList<>();
+        visited[v] = true;
+        queue.add(v);
+
+        while (queue.size() != 0) { // 큐가 완전히 빌 때까지 반복
+            v = queue.poll();
+            System.out.print(v + " ");
+
+            Iterator<Integer> iter = adjList[v].listIterator();
+            while(iter.hasNext()) {
+                int w = iter.next();
+                if (!visited[w]) {
+                    visited[w] = true;
+                    queue.add(w);
+                }
             }
         }
     }
