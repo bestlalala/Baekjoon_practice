@@ -14,7 +14,6 @@ public class P1012 {
         for (int i = 0; i < t; i++) {
             test();
         }
-
     }
 
     public static void test() {
@@ -34,8 +33,9 @@ public class P1012 {
         count = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (!visited[i][j]) {
+                if (map[i][j] == 1 && !visited[i][j]) {
                     countWorm(i, j, map, visited);
+                    count++;
                 }
             }
         }
@@ -51,10 +51,10 @@ public class P1012 {
 
             if (nx >= 0 && ny >= 0 && nx < map.length && ny < map[0].length) {
                 if (map[nx][ny]==1 && !visited[nx][ny]) {
-                    count++;
                     countWorm(nx, ny, map, visited);
                 }
             }
         }
+
     }
 }
