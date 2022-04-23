@@ -47,15 +47,16 @@ public class P2178 {
         visited[0][0] = true;
         while (!queue.isEmpty()) {
             Location location = queue.poll();
+            if (location.row == n-1 && location.col == m-1) {
+                System.out.println(location.dist);
+                return;
+            }
 
             for (int i = 0; i < 4; i++) {
                 int nr = location.row + dy[i];
                 int nc = location.col + dx[i];
 
-                if (location.row == n-1 && location.col == m-1) {
-                    System.out.println(location.dist);
-                    return;
-                }
+
 
                 if (nr >= 0 && nc >= 0 && nr < n && nc < m) {
                     if (maze[nr][nc] == 1 && !visited[nr][nc]) {
