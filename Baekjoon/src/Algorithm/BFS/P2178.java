@@ -56,8 +56,6 @@ public class P2178 {
                 int nr = location.row + dy[i];
                 int nc = location.col + dx[i];
 
-
-
                 if (nr >= 0 && nc >= 0 && nr < n && nc < m) {
                     if (maze[nr][nc] == 1 && !visited[nr][nc]) {
                         queue.add(new Location(nr, nc, location.dist+1));
